@@ -173,6 +173,10 @@
 
 @media only screen and (max-width: 978px) {
   .header {
+    .container {
+      padding: 0 24px;
+    }
+
     &-form {
       display: none;
     }
