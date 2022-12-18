@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  background: var(--primary-background-color);
+}
+
+:root {
+  --primary-background-color: #858585;
+  --primary-light-color: #FFFFFF;
+  --primary-dark-black-color: #181818;
+}
+
+.container {
+  width: 100%;
+  max-width: 1224px;
+  padding: 0 32px;
+  margin: 0 auto;
+}
