@@ -73,6 +73,17 @@
     }
   }
 
+  &-humburger-button {
+    display: none;
+    margin-left: 22px;
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      color: var(--primary-black-color);
+    }
+  }
+
   &-nav>div:nth-child(1) {
     margin-right: 44px;
   }
@@ -157,5 +168,21 @@
     width: 16px;
     height: 16px;
     margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 978px) {
+  .header {
+    &-form {
+      display: none;
+    }
+
+    &-nav-item {
+      display: none;
+    }
+
+    &-humburger-button {
+      display: block;
+    }
   }
 }

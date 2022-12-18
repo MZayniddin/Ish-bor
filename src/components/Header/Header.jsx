@@ -2,6 +2,7 @@ import './Header.scss';
 import logo from '../../assets/images/logo.svg';
 import defaultProfileImg from '../../assets/images/profile-default-image.svg';
 import { BiSearch } from 'react-icons/bi';
+import { TbMenu } from 'react-icons/tb';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { RiLogoutBoxRLine } from 'react-icons/ri';
 import { useState } from 'react';
@@ -48,6 +49,9 @@ export default function Header() {
                 </div>
                 : null
             }
+          </div>
+          <div className='header-humburger-button'>
+            <TbMenu className='header-humburger-button-icon' />
           </div>
         </nav>
       </div>
