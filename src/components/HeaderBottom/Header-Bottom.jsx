@@ -1,5 +1,4 @@
 import './Header-Bottom.scss';
-import { CgOptions } from 'react-icons/cg';
 import moneyImg from '../../assets/images/headerBottom-money-img.svg';
 import desktopImg from '../../assets/images/headerBottom-desktop-img.svg';
 import morterboardImg from '../../assets/images/headerBottom-morterboard-img.svg';
@@ -25,10 +24,6 @@ export default function HeaderBottom() {
         <div className='headerBottom-newCummer'>
           <span>Yangi qo'shilganlar</span>
         </div>
-      </div>
-      <div className='headerBottom-bar'>
-        <CgOptions className='headerBottom-bar-icon' />
-        <span>Kategoriyalar</span>
       </div>
     </div>
   )
