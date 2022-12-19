@@ -1,0 +1,21 @@
+.main {
+  width: 100%;
+  padding: 50px 0 54px;
+
+  &__hero {
+    width: 100%;
+    min-height: 623px;
+    background-color: #4E4E4E;
+
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    &__main>h1 {
+      font-size: 64px;
+      line-height: 110.8%;
+      color: #FFFFFF;
+    }
+  }
+}
