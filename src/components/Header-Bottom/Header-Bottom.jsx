@@ -3,6 +3,7 @@ import { CgOptions } from 'react-icons/cg';
 import moneyImg from '../../assets/images/headerBottom-money-img.svg';
 import desktopImg from '../../assets/images/headerBottom-desktop-img.svg';
 import morterboardImg from '../../assets/images/headerBottom-morterboard-img.svg';
+import { Link } from 'react-router-dom';
 
 export default function HeaderBottom() {
   return (
@@ -22,9 +23,9 @@ export default function HeaderBottom() {
             <span>Sohani tanlang</span>
           </div>
         </div>
-        <div className='headerBottom-newCummer'>
+        <Link to="/" className='headerBottom-newCummer'>
           <span>Yangi qo'shilganlar</span>
-        </div>
+        </Link>
       </div>
       <div className='headerBottom-bar'>
         <CgOptions className='headerBottom-bar-icon' />
