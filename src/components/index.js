@@ -1,7 +1,9 @@
-import Header from "./Header/Header";
+import HeaderBottom from "./Header-Bottom/Header-Bottom";
 import Layout from "./Layout";
+import Main from "./Main/Main";
 
 export {
-  Header,
-  Layout
+  Layout,
+  HeaderBottom,
+  Main
 }
