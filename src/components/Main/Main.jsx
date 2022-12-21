@@ -182,7 +182,10 @@ export default function Main() {
           </div>
         </section>
         <section className='main__announcement'>
-          <h2>E’lonlar</h2>
+          <div className='main__announcement-title'>
+            <h2>E’lonlar</h2>
+            <Link to="/">Barchasi</Link>
+          </div>
           <div className='main__latest__announcement-items'>
             <Link to="/">
               <article className='main__latest__announcement-item'>

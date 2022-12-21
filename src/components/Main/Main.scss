@@ -210,11 +210,24 @@
   &__announcement {
     margin-bottom: 100px;
 
-    &>h2 {
+    &-title {
       margin-bottom: 25px;
-      font-weight: 400;
-      font-size: 32px;
-      color: var(--primary-dark-black-color);
+      display: flex;
+      justify-content: space-between;
+
+      &>h2 {
+        font-weight: 400;
+        font-size: 32px;
+        color: var(--primary-dark-black-color);
+      }
+
+      &>a {
+        font-weight: 400;
+        font-size: 28px;
+        text-align: right;
+        text-decoration-line: underline;
+        color: #3211FF;
+      }
     }
   }
 
