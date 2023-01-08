@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [activeProfileButton, setactiveProfileButton] = useState(false);
+  const [isactiveHamburberBar, setisactiveHamburberBar] = useState(false);
+  const [isactiveSearch, setisactiveSearch] = useState(false);
 
   return (
     <header className='header'>
@@ -34,25 +36,51 @@ export default function Header() {
             </div>
             {
               activeProfileButton ?
-                <div className='header-profile-bar'>
-                  <div className='header-profile-bar-item' >
-                    <span>Muhammadaziz Mo'sinov</span>
+                <>
+                  <div className='header-profile-bar'>
+                    <div className='header-profile-bar-item'>
+                      <span>Muhammadaziz Mo'sinov</span>
+                    </div>
+                    <div className='header-profile-bar-item' >
+                      <span>Profile</span>
+                      <span>Sozlamalar</span>
+                    </div>
+                    <div className='header-profile-bar-item' >
+                      <span>Chiqish</span>
+                      <RiLogoutBoxRLine className='header-profile-bar-item-close-icon' />
+                    </div>
                   </div>
-                  <div className='header-profile-bar-item' >
-                    <span>Profile</span>
-                    <span>Sozlamalar</span>
-                  </div>
-                  <div className='header-profile-bar-item' >
-                    <span>Chiqish</span>
-                    <RiLogoutBoxRLine className='header-profile-bar-item-close-icon' />
-                  </div>
-                </div>
+                  <div className='module' onClick={(() => setactiveProfileButton(false))}></div>
+                </>
                 : null
             }
           </div>
-          <div className='header-humburger-button'>
+          <div className='header-humburger-button' onClick={(() => setisactiveHamburberBar((e) => e ? false : true))}>
             <TbMenu className='header-humburger-button-icon' />
+            {
+              isactiveHamburberBar ?
+                <>
+                  <div className="header-humburger-button-bar">
+                    <Link to="/elonlar">E'lonlar</Link>
+                    <Link to="/chat">Chat</Link>
+                    <span onClick={(() => setisactiveSearch(true))}>Qidirish</span>
+                    <Link to="/elonberish">E'lon Berish</Link>
+                  </div>
+                  <div className="module"></div>
+                </>
+                : null
+            }
           </div>
+          {
+            isactiveSearch ?
+              <div className='header-search-module'>
+                <form action="" className='header-search-module-form' onSubmit={(() => setisactiveSearch(false))}>
+                  <input type="text" placeholder='Search' required minLength={3} maxLength={50} />
+                  <button type='submit'><BiSearch className='header-search-module-form-icon' /></button>
+                </form>
+              </div>
+              : null
+          }
         </nav>
       </div>
     </header>
