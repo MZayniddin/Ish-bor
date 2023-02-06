@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-import { Home } from '../Pages';
-import Chat from '../Pages/Chat/Chat';
+import { Home, Chat, About } from '../Pages';
 
 export default function RoutesWrapper() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/chat" element={<Chat />} />
+      <Route path="/about" element={<About />} />
     </Routes>
   )
 }
