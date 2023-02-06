@@ -1,0 +1,138 @@
+@import "../../middlewares/index";
+
+.about {
+
+  &-urlBox {
+    margin: 40px 0 72px;
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary-light-color);
+    border-radius: 2px;
+
+    &>span {
+      opacity: 0.6;
+      @include fontStyles(400, 14px, 16px, var(--primary-black-color));
+    }
+
+    &-arrowIcon {
+      width: 20px;
+      height: 20px;
+      opacity: 0.6;
+    }
+
+    &>span:last-child {
+      opacity: 1;
+    }
+  }
+
+  &-us {
+    max-width: 800px;
+    margin-bottom: 80px;
+
+    &>h1 {
+      margin-bottom: 20px;
+      @include fontStyles(400, 32px, 110.8%, var(--primary-black-color));
+    }
+
+    &>p {
+      @include fontStyles(400, 18px, 146.8%, var(--primary-black-color));
+      opacity: 0.7;
+    }
+  }
+
+  &-ourGoal {
+    margin-bottom: 54px;
+    padding: 50px 47px 50px 72px;
+    background-color: var(--primary-light-color);
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    min-height: 567px;
+
+    &-main {
+      width: 100%;
+      max-width: 470px;
+
+      &>h2 {
+        margin-bottom: 20px;
+        @include fontStyles(400, 32px, 110.8%, var(--primary-black-color));
+      }
+
+      &>p {
+        margin-bottom: 96px;
+        @include fontStyles(400, 18px, 155.3%, var(--primary-black-color));
+        opacity: 0.7;
+      }
+
+      &>a {
+        padding: 15px 35px;
+        @include fontStyles(400, 18px, 146.8%, var(--primary-light-color));
+        background-color: var(--primary-orange-color);
+      }
+    }
+
+    &-img-wrapper {
+      &>img {
+        width: 495px;
+        height: 497px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 978px) {
+
+  .about-ourGoal-img-wrapper>img {
+    width: 445px;
+    height: 447px;
+  }
+}
+
+@media only screen and (max-width: 926px) {
+  .about {
+    &-urlBox {
+      margin-left: 16px;
+    }
+
+    .container {
+      padding: 0;
+    }
+
+    &-us {
+      padding: 0 16px;
+      margin-bottom: 60px;
+    }
+
+    &-ourGoal {
+      padding: 38px 16px;
+      align-items: start;
+      flex-direction: column;
+
+      &-main {
+        max-width: 100%;
+      }
+
+      &-img-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &>img {
+          width: 495px;
+          height: 497px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 556px) {
+  .about-ourGoal-img-wrapper>img {
+    width: 100%;
+    height: 332px;
+  }
+}

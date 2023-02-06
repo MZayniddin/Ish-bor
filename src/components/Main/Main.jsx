@@ -21,7 +21,7 @@ export default function Main() {
           <div className="main__hero__main">
             <h1>Assalomu Alaykum</h1>
             <p>Siz bu yerda ish berishingiz va ish olishingiz mumkun</p>
-            <Link to="/">Ko'proq bilish</Link>
+            <Link to="/about">Ko'proq bilish</Link>
           </div>
           <div className="main__hero__img-wrapper">
             <img src={heroImg} alt="" />
