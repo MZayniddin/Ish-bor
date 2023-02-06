@@ -70,8 +70,21 @@
     display: flex;
     align-items: center;
 
-    &>div {
+    &>a {
       cursor: pointer;
+    }
+
+    &>a:nth-child(1) {
+      margin-right: 44px;
+    }
+
+    &>a:nth-child(2) {
+      margin-right: 76px;
+    }
+
+    &>a:nth-child(3) {
+      margin-right: 56px;
+      font-weight: 700;
     }
 
     &-item {
@@ -83,6 +96,7 @@
     }
   }
 
+
   &-humburger-button {
     display: none;
     margin-left: 22px;
@@ -92,6 +106,7 @@
       width: 24px;
       height: 24px;
       color: var(--primary-black-color);
+      cursor: pointer;
     }
 
     &-bar {
@@ -112,6 +127,7 @@
         font-size: 16px;
         line-height: 19px;
         color: var(--primary-dark-black-color);
+        cursor: pointer;
       }
 
       &>a:last-child {
@@ -181,19 +197,6 @@
     }
   }
 
-  &-nav>div:nth-child(1) {
-    margin-right: 44px;
-  }
-
-  &-nav>div:nth-child(2) {
-    margin-right: 76px;
-  }
-
-  &-nav>div:nth-child(3) {
-    margin-right: 56px;
-    font-weight: 700;
-  }
-
   &-profile-wrapper {
     width: 60px;
     height: 40px;
@@ -204,6 +207,7 @@
   &-profile {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   &-profile>img {
@@ -236,8 +240,13 @@
     margin-bottom: 12px;
   }
 
+  &-profile-bar-item:last-child {
+    cursor: pointer;
+  }
+
   &-profile-bar-item>span {
     word-break: keep-all;
+    cursor: pointer;
   }
 
   &-profile-bar>div:first-child>span {

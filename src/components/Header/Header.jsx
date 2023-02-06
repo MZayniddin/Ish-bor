@@ -6,13 +6,12 @@ import { TbMenu } from 'react-icons/tb';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { RiLogoutBoxRLine } from 'react-icons/ri';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
   const [activeProfileButton, setactiveProfileButton] = useState(false);
   const [isactiveHamburberBar, setisactiveHamburberBar] = useState(false);
   const [isactiveSearch, setisactiveSearch] = useState(false);
-
   return (
     <header className='header'>
       <div className="container">
@@ -26,9 +25,9 @@ export default function Header() {
           </form>
         </div>
         <nav className='header-nav'>
-          <div className='header-nav-item'>E'lonlar</div>
-          <div className='header-nav-item'>Chat</div>
-          <div className='header-nav-item'>E'lon Berish</div>
+          <NavLink style={({ isActive }) => isActive ? { "color": "#FF8040" } : null} to="/elonlar" className='header-nav-item'>E'lonlar</NavLink>
+          <NavLink style={({ isActive }) => isActive ? { "color": "#FF8040" } : null} to="/chat" className='header-nav-item'>Chat</NavLink>
+          <NavLink style={({ isActive }) => isActive ? { "color": "#FF8040" } : null} to="/elonberish" className='header-nav-item'>E'lon Berish</NavLink>
           <div className='header-profile-wrapper'>
             <div className='header-profile' onClick={() => setactiveProfileButton((e) => e ? false : true)}>
               <img src={defaultProfileImg} alt="Profileimage" />
