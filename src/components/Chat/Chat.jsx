@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 
 export default function ChatPage() {
-  const [scrollWidth, setscrollWidth] = useState(false);
+  const [scrollWidth, setscrollWidth] = useState(window.innerWidth);
   const [selectedUser, setselectedUser] = useState(false);
 
   window.addEventListener("resize", (e) => {
